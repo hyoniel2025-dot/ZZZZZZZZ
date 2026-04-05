@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: bot-archivador
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python3 bot.py
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_API_ID
+        sync: false
+      - key: TELEGRAM_API_HASH
+        sync: false
+      - key: TELEGRAM_ADMIN_ID
+        sync: false
+      - key: ARCHIVE_ORG_ACCESS_KEY
+        sync: false
+      - key: ARCHIVE_ORG_SECRET_KEY
+        sync: false
